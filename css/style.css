@@ -237,3 +237,13 @@ footer{background:var(--ink);color:#A9B9B4;font-size:14px;padding:60px 0 0}
   .hero{text-align:left}
   .cta-band{text-align:left}
 }
+/* header logo + entrance animation (portfolio polish) */
+header{animation:navIn .7s cubic-bezier(.2,.7,.2,1) both}
+@keyframes navIn{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:34px;height:34px;flex:none;animation:logoPop .6s .25s cubic-bezier(.34,1.56,.64,1) both}
+.logo{animation:logoPop .6s .25s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes logoPop{from{opacity:0;transform:scale(.4) rotate(-14deg)}to{opacity:1;transform:none}}
+.nav-links a{position:relative;padding-bottom:3px}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:currentColor;transition:width .3s ease}
+.nav-links a:hover::after{width:100%}

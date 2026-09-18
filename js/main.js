@@ -89,12 +89,12 @@
   }
 
   /* ---------- WhatsApp booking ---------- */
-  var WA_NUMBER = "923165661622";
+  // contact via email (phone removed)
   var buildMessage = function (lines) {
     return lines.filter(function (s) { return s && s.trim() !== ""; }).join("\n");
   };
   var openWhatsApp = function (text) {
-    window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text), "_blank", "noopener");
+    window.open("mailto:hello@carewellclinic.pk?subject=Enquiry&body=" + encodeURIComponent(text), "_blank");
   };
 
   document.querySelectorAll(".wa-booking").forEach(function (btn) {
